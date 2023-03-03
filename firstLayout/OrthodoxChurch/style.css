@@ -1,0 +1,83 @@
+
+
+
+
+/* CSS для данного HTML-кода */
+
+/* Стили для элементов заголовка и навигационной панели */
+header {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #fff;
+padding: 20px;
+border-bottom: 1px solid #ddd;
+}
+nav {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+nav li {
+margin-right: 20px;
+}
+nav li:last-child {
+margin-right: 0;
+}
+nav a {
+color: #333;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Стили для основного содержимого */
+main {
+padding: 20px;
+}
+
+.about, .services, .events {
+margin-bottom: 40px;
+}
+.about h2, .services h2, .events h2 {
+margin-bottom: 20px;
+font-size: 28px;
+}
+.about p, .services ul, .events ul {
+font-size: 18px;
+line-height: 1.5;
+}
+.services ul li, .events ul li {
+margin-bottom: 10px;
+}
+
+/* Стили для нижнего колонтитула */
+footer {
+background-color: #eee;
+padding: 10px;
+text-align: center;
+font-size: 14px;
+color: #666;
+}
+
+header h1, section h2 {
+    color: #990000;
+    }
+    
+    nav {
+    background-color: #fff2cc;
+    }
+    
+    footer {
+    background-color: #333;
+    color: #fff;
+    }

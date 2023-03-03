@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a,a:visited{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+body{
+    background-image: url(https://media.istockphoto.com/id/1367117489/photo/white-flower.jpg?b=1&s=170667a&w=0&k=20&c=MpZOwRNCbi1WoX9G9Lf7XU6pKISSY6J66xKxTCGsrZU=);
+    background-attachment: fixed;
+    padding: 120px 0 0 0;
+}
+
+
+h1 {
+    color: springgreen;
+    
+    background: url(https://media.istockphoto.com/id/1198271727/photo/abstract-wavy-object.jpg?b=1&s=170667a&w=0&k=20&c=vZ7GTnSoJlLLJOlqlpKsaXHom4GVFmAoitxUnFZGHs4=) 0 0/contain no-repeat, url(https://media.istockphoto.com/id/1431321650/photo/transportation-on-the-öresund-bridge-across-the-sea.jpg?b=1&s=170667a&w=0&k=20&c=3EonQVonnwQYLiVrWIcyKRbDL2zElpBQTwHRUV3aiz8=) 0 0/cover no-repeat; 
+    font-size: 72px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+h1:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+h1:active{
+    color: yellow;
+    position: relative;
+    left: 50px;
+    top: 60px;
+}
+
+h2{
+    font-family: "Helvetica";
+    font-style: oblique;
+    text-transform: lowercase;
+}
+
+    
+
+header{
+    background-image: url(https://media.istockphoto.com/id/1337639487/photo/round-podium-or-pedestal-with-green-background.jpg?b=1&s=170667a&w=0&k=20&c=c95dBgfd1mLt6TCatZK6fJBexrb3TxPs8D2x6Y5zIUw=);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-color: wheat;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+}
+
+
+nav{
+    width: 75px;
+    height: 75px;
+    border: #000 solid 1px;
+    border-radius: 50%;
+    position: sticky;/*не для всех браузеров, едет до границы родителя*/
+    top: 120px; 
+}
+
+nav p{
+    padding: 40% 0;
+}
+
+ul{
+    position: relative;
+}
+
+ul li::before{
+    content: '«';
+}
+
+ul li::after{
+    content: '»';
+}
+
+ul li:nth-child(odd){
+    text-transform: uppercase;
+}
+
+ul li:nth-child(even){
+    font-style: italic;
+}
+
+ul li:nth-child(2):hover{
+    text-decoration: underline;
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
+ul li:last-child{
+    color: green;
+}
+
+ol li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+ol li:hover::before{
+    background-color: yellow;
+}
+
+ol li:first-child{
+    color: yellowgreen;
+}
+
+input:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+a:visited{
+    color: rgb(24, 38, 187);
+}
+
+#articles {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efbea3+0,f8ddd4+100&1+0,1+62,0.7+68,0+100 */
+    background: -moz-linear-gradient(bottom,  rgba(239,190,163,1) 0%, rgba(245,209,193,1) 62%, rgba(245,211,196,0.7) 68%, rgba(248,221,212,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom,  rgba(239,190,163,1) 0%,rgba(245,209,193,1) 62%,rgba(245,211,196,0.7) 68%,rgba(248,221,212,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top,  rgba(239,190,163,1) 0%,rgba(245,209,193,1) 62%,rgba(245,211,196,0.7) 68%,rgba(248,221,212,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efbea3', endColorstr='#00f8ddd4',GradientType=0 ); /* IE6-9 */
+
+    line-height: 18px;
+}
+
+#galary {
+    background-color: khaki;
+    font-weight: 800;
+}
+
+
+#footer {
+    background-color: #7fffd4;
+}
+
+
+#subcolumn2 {
+    flex-basis: 150px;
+    max-width: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    letter-spacing: 10px;
+    position: relative;
+}
+
+#subcolumn2::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    left: -10px;
+}
+
+#subcolumn2::first-line{
+    color: green;
+}
+
+#subcolumn2::first-letter{
+    color: red;
+    font-size: 50px;
+}
+
+#picture {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 50px 0 50px 0;
+}
+
+#nogap {
+    gap: 0;
+    justify-content: left;
+    height: 200px;
+    overflow: auto;
+    border-radius: 50px;
+    padding-top: 40px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-family: "William", serif;
+    height: 50vh;
+    width: 50vw;
+    border: 1px dashed wheat;
+    border-top: 0;
+    border-radius: 50px;
+} 
+
+.overlay {
+    background-color: rgba(255, 255, 0, .3);
+    border-top: 1px dotted #000;
+}
+
+.opacity02{
+    opacity: 0.2;
+}
+
+.content {
+    font-size: 0;
+}
+
+.column {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    box-shadow: -2px 2px 5px 15px #FD6969;
+}
+.subcolumn {
+    flex-basis: 150px;
+    max-width: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-shadow: -2px 2px 5px #FD6969;
+}
+
+span.subcolumn {
+    font-size: 20px;
+    outline: #000 1px solid;
+    box-shadow:  inset 5px 5px 10px 5px #FD6969;
+}
+
+.subcolumn span {
+    color: green;
+}
+
+.neg-margin{
+    margin: 0 0 0 -10px;
+    background: -moz-linear-gradient(left,  rgba(239,190,163,1) 0%, rgba(245,209,193,1) 62%, rgba(245,211,196,0.7) 68%, rgba(248,221,212,0) 100%);
+    background: -webkit-linear-gradient(left,  rgba(239,190,163,1) 0%,rgba(245,209,193,1) 62%,rgba(245,211,196,0.7) 68%,rgba(248,221,212,0) 100%);
+    background: linear-gradient(to right,  rgba(239,190,163,1) 0%,rgba(245,209,193,1) 62%,rgba(245,211,196,0.7) 68%,rgba(248,221,212,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efbea3', endColorstr='#00f8ddd4',GradientType=1 );
+
+
+}
+
+
+.dec-through{
+    text-decoration: line-through;
+}
+
+.dec-over{
+    text-decoration: overline;
+}
+
+.capital{
+    text-transform: capitalize;
+}
+
+.ident{
+    text-indent: 50px;
+}
+
+.word-spacing5{
+    word-spacing: 5px;
+}
+
+.whitespace{
+    white-space: nowrap;
+}
+
+.block>p {
+    color: blue;
+}
+
+.text-center {
+    text-align: center;
+}
+.vertical-base-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.none{
+    display: none;
+}
