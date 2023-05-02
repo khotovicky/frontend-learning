@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+button {
+    background-color: black;
+    color: white;
+    font-family: "William", serif;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+} 
+h1 {
+    margin: 0;
+    color: springgreen;
+    background-image: url(https://media.istockphoto.com/id/1431321650/photo/transportation-on-the-öresund-bridge-across-the-sea.jpg?b=1&s=170667a&w=0&k=20&c=3EonQVonnwQYLiVrWIcyKRbDL2zElpBQTwHRUV3aiz8=); 
+    background-size: cover;
+    font-size: 72px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+}
+h2{
+    margin: 0;
+    font-family: "Helvetica";
+}
+header{
+    background-image: url(https://media.istockphoto.com/id/1337639487/photo/round-podium-or-pedestal-with-green-background.jpg?b=1&s=170667a&w=0&k=20&c=c95dBgfd1mLt6TCatZK6fJBexrb3TxPs8D2x6Y5zIUw=);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-color: wheat;
+}
+a{
+    text-decoration: none;
+}
+
+
+#articles {
+    background-color: antiquewhite;
+    line-height: 18px;
+}
+#galary {
+    background-color: khaki;
+    font-weight: 800;
+}
+#footer {
+    background-color: aquamarine;
+}
+
+#subcolumn2 {
+    flex-basis: 150px;
+    max-width: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    letter-spacing: 10px;
+}
+
+#picture {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 0, .3);
+}
+
+.content {
+    font-size: 0;
+}
+
+.column {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    box-shadow: -2px 2px 5px #FD6969;
+}
+.subcolumn {
+    flex-basis: 150px;
+    max-width: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-shadow: -2px 2px 5px #FD6969;
+}
+
+.text-center {
+    text-align: center;
+}
+.vertical-base-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

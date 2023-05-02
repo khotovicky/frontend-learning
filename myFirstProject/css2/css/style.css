@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  padding: 30px;
+  text-align: left;
+}
+
+div {
+  padding: 21px 0;
+  font-family: Arial;
+  color: #333333;
+}
+div .first {
+  text-align: right;
+}
+div .second {
+  text-transform: uppercase;
+}
+div .third {
+  font-style: italic;
+}
+div .forth {
+  text-align: center;
+}
+div .fifth {
+  font-size: 24px;
+}
+div .sixth {
+  text-decoration: line-through;
+}
+div .seventh {
+  font-family: "Times New Roman";
+}
+div .eights {
+  text-shadow: 0px 1px 1px #000000;
+}
+div .ninth {
+  text-decoration: underline;
+}

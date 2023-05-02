@@ -1,0 +1,106 @@
+@import "nullstyle.scss";
+
+body{
+    background-color: #e8e8e8;
+}
+.content {
+    max-width: 856px;
+    margin: 0 auto;
+    padding: 0 0 300px;
+    text-align: left;
+    font-family: Arial;
+}
+.list {
+    padding: 155px 0 129px 34px;
+    font-size: 20px;
+    line-height: 36px;
+    color: #273d46;
+    li{
+        position: relative;
+    }
+    li:before{
+        content:'';
+        width: 25px;
+        height: 19px;
+        top: 8.5px;
+        left: -34px;
+        background: url('../img/check_green.png');
+        position: absolute;
+    }
+    li:nth-child(1){
+        text-decoration: line-through;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    li:nth-child(2){
+        font-weight: 700;
+        &:hover{
+            font-weight: 400;
+            color: #d55a5a;
+            &::before{
+                background: url('../img/check_red.png');
+            }
+        }
+    }
+    li:nth-child(3){
+        font-style: italic;
+        &:hover{
+            font-style: normal;
+        }
+    }
+    li:nth-child(4){
+        &:hover{
+            text-transform: lowercase;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+        text-transform: uppercase;
+    }
+
+}
+.button {
+    display: inline-block;
+    margin: 0 0 125px 25px;
+    background-color: #81b7b2;
+    border-radius: 22px;
+    box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+    width: 199px;
+    &:hover{
+        background-color: #3a5856;
+    }
+    &:active{
+        background-color: #818181;
+        box-shadow: none;
+    }
+    span{
+        position: relative;
+        padding: 0 0 0 30px;
+        display: inline-block;
+        line-height: 44px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        &::after{
+            content:'';
+            position: absolute;
+            background-image: url(../img/arrow.svg);
+            width: 21px;
+            height: 14px;
+            top: 15px;
+            right: -32px;
+        }
+    }
+}
+.textarea{
+    input{
+        width: 294px;
+        height: 52px;
+        border: 1px solid #b0b0b0;
+        &:focus{
+            border: 1px solid #7fbed5;
+            box-shadow: 0px 0px 20px -1px rgba(127,190,213,0.93);
+        }
+    }
+}

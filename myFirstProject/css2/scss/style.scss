@@ -1,0 +1,40 @@
+@import "nullstyle.scss";
+
+body{
+    padding: 30px;
+    text-align: left;
+}
+
+div{
+    padding: 21px 0;
+    font-family: Arial;
+    color: #333333;
+    .first {
+        text-align: right;
+    }
+    .second {
+        text-transform: uppercase;
+    }
+    .third {
+        font-style: italic;
+    }
+    .forth {
+        text-align: center;
+    }
+    .fifth {
+        font-size: 24px;
+    }
+    .sixth {
+        text-decoration: line-through;
+    }
+    .seventh {
+        font-family: 'Times New Roman';
+    }
+    .eights {
+        text-shadow: 0px 1px 1px #000000;
+    }
+    .ninth {
+        text-decoration: underline;
+    }
+}
+
