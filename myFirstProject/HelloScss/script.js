@@ -112,7 +112,7 @@ for (let key in phoneBook) {
 
 phoneBook.showInfo()
 
-function UserInfo(name) {
+function UserInfo(name, symbols) {
   this.name = name
   this.age = 30
   this.age1 = 1e6
@@ -126,10 +126,84 @@ function UserInfo(name) {
   this.age9 = [Math.round(3.2), Math.round(3.6)]
   this.age91 = 1.2345
   this.age92 = +this.age91.toFixed(2)
-  this.age93 = 1.005
-  this.age94 = Math.round(this.age93 + Number.EPSILON)
-
+  this.age93 = 1.005 + Number.EPSILON
+  this.age94 = +this.age93.toFixed(2)
+  this.age95 = '150.58px'
+  this.age96 = parseInt(this.age95)
+  this.age97 = parseFloat(this.age95)
+  this.age98 = parseInt(this.age3, 16)
+  this.age99 = Math.random()
+  this.age990 = Math.max(this.age, this.age1, this.age2)
+  this.age991 = Math.min(this.age3, this.age4, this.age5)
+  this.age992 = Math.abs(this.age7)
+  this.age993 = Math.pow(this.age8, this.age91)
+  this.string = `Привет!
+  Так можно записывать многострочно
+  `
+  this.string1 = "Привет!\n\tЭто\n\t\tтабуляция"
+  this.string2 = 'Привет!\\Это обратный слэш'
+  this.string3 = "Привет! \"Это кавычки\" \u00A9 \u{1F60D}"
+  this.stringage = this.string.length
+  this.string4 = this.string[0]
+  this.string5 = this.string[this.string.length - 1]
+  this.string6 = this.string.toUpperCase()
+  this.string7 = this.string6.toLowerCase()
+  this.stringage0 = this.string.indexOf('рив')
+  this.stringage1 = this.string.indexOf('в', 10)
+  this.string92 = this.string.lastIndexOf('рив')
+  this.string8 = this.string.includes('рив', 3)
+  
+  this.string9 = this.string.startsWith('рив')
+  this.string90 = this.string.endsWith(" ")
+  this.string91 = this.string.slice(1, 2)
+  this.symbols = symbols
 }
+function symbolsToObject(key) {
+  let a
+    for (const char of key) {
+      a = [char]
+    }
+    console.log(a)
+}
+let age6 = '123'
+let symbols = symbolsToObject(age6)
+let ourObject = new UserInfo('Basia', symbols)
 
-console.log(new UserInfo('Basia'))
+console.log(isNaN(25 + "Hi"))
+console.log(isFinite('25'))
+console.log(ourObject)
 
+
+let arr = ['Wania', 'Isztwan', 'Ola']
+arr.push('Dima', 'Katia')
+console.log(arr)
+arr.shift()
+arr.pop()
+arr.unshift('Vasia')
+let removed = arr.splice(1, 1)
+arr.splice(0, 1, 'Kola')
+arr.splice(1, 0, 'Masza', 'Jurek')
+let arrZero = arr.slice(1, 2)
+let arrOne = arr.concat('Pietia')
+arr.sort()
+let arrTwo = [8, 22, 1]
+arrTwo.sort((a, b) => a - b) // kiedy liczby
+arr.reverse()
+let arrThree = arr.map(item => item[0])
+let string = 'Привет! Так нельзя записывать многострочно'
+let arrFour = string.split(' ', 2)
+let stringZero = arr.join(', ')
+Array.isArray(arr)
+arr.forEach((item, index, array) => {
+  console.log(`${item} znajduję się na ${index} pozycji w ${array}`)
+})
+
+let arrObjects = [
+  {name: 'Vasia', age: 36},
+  {name: 'Kola', age: 18},
+  {name: 'Ola', age: 'Nie powiem'}
+]
+
+let result = arrObjects.find(item => item.age === 18)
+let resultZero = arrObjects.findIndex(item => item.age === 18)
+let resultOne = arrObjects.filter(item => item.age >= 18)
