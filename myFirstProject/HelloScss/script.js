@@ -11,7 +11,7 @@ function sayHello(name) {
 let greeting = sayHello('Не закрывай это уведомление!');
 
 console.log(greeting);
-alert(greeting);
+//alert(greeting);
 button.addEventListener('click', function () {
     // если фон кнопки чёрный
     if (button["style"].backgroundColor == 'black') {
@@ -62,8 +62,50 @@ function calcSumm(numOne, numTwo) {
   let numSumm = numOne + numTwo
   return numSumm
 }
+switch (a) {
+  case 2:
+  case 10:
+  // какие-то крутые вещи
+  break;
+  case 42:
+  // другие вещи
+  break;
+  default:
+  // резерв
+}
+  
 let funcResult = calcSumm(1, 2)
 console.log(`Sum: ${funcResult}`)
+
+//(function IIFE(){console.log("Hello!")})();
+  // "Hello!"
+
+function makeAdder(x) {
+  // параметр `x` - внутренняя переменная
+  
+  // внутренняя функция `add()` использует `x`, поэтому
+  // у нее есть "замыкание" на нее
+  function add(y) {
+  return y + x;
+  };
+  
+  return add;
+}
+
+// `plusOne` получает ссылку на внутреннюю функцию `add(..)`
+// с замыканием на параметре `x`
+// внешней `makeAdder(..)`
+var plusOne = makeAdder( 1 );
+
+// `plusTen` получает ссылку на внутреннюю функцию `add(..)`
+// с замыканием на параметре `x`
+// внешней `makeAdder(..)`
+var plusTen = makeAdder( 10 );
+
+plusOne( 3 );// 4 <— 1 + 3
+plusOne( 41 );// 42 <— 1 + 41
+
+plusTen( 13 );// 23 <— 10 + 13
 
 let getMessage = (text, Name) => text + Name
 function showMessage (text, Name) { 
@@ -197,6 +239,17 @@ Array.isArray(arr)
 arr.forEach((item, index, array) => {
   console.log(`${item} znajduję się na ${index} pozycji w ${array}`)
 })
+let reduce = arrTwo.reduce(function(previousValue, item) {
+  return previousValue + item
+}, 0) // also reduceRight
+console.log(reduce)
+
+let users = ["Ваня", "Иштван"]
+users.push("Оля")
+users[1] = "Петя"
+let removedZero = users.splice(0, 1)
+users.unshift("Маша", "Паша")
+console.log(users, removedZero)
 
 let arrObjects = [
   {name: 'Vasia', age: 36},
@@ -207,3 +260,353 @@ let arrObjects = [
 let result = arrObjects.find(item => item.age === 18)
 let resultZero = arrObjects.findIndex(item => item.age === 18)
 let resultOne = arrObjects.filter(item => item.age >= 18)
+
+//let confirmResult = confirm("Хочешь научиться верстать?")
+//let promptResult = prompt("Кто ты по жизни?")
+
+const htmlElement = document.documentElement
+const headElement = document.head
+const bodyElement = document.body
+const firstChildNode = bodyElement.firstChild
+const lastChildNode = bodyElement.lastChild
+const childNodes = bodyElement.childNodes
+const previousSiblingNode = bodyElement.previousSibling
+const nextSiblingNode = bodyElement.nextSibling
+const parentNode = bodyElement.parentNode
+const bodyChildren = bodyElement.children
+const previousSiblingElement = bodyElement.previousElementSibling
+const nextSiblingElement = bodyElement.nextElementSibling
+const parentElement = bodyElement.parentElement
+const firstChildElement= bodyElement.firstElementChild
+const lastChildElement = bodyElement.lastElementChild
+const elemsOne = document.querySelectorAll('title')
+const elemsTwo = document.querySelector('[attribute="example"]')
+const headerBody = document.querySelector('.header_body')
+const elem = document.getElementById('articles')
+const elems = document.getElementsByTagName('div')
+const elemsZero = document.getElementsByClassName('text-center')
+const elemsThree = document.getElementsByName('viewport')
+const ancestorElement = headerBody.closest('.text-center')
+for (let elem of elemsOne) { 
+  console.log(elem.matches('[class$="button"]'))
+}
+const headerBodyContent = headerBody.innerHTML
+headerBody.innerHTML = 'Живи, а работай в свободное время!'
+elemsTwo.outerHTML = 'Живи, а работай в свободное время!'
+elem.textContent
+const elemZero = document.querySelector('[name="viewport"]')
+const getComment = elemZero.previousSibling
+getComment.data = `Привет! ${getComment.data}`
+const newElement = document.createElement('div')
+const newText = document.createTextNode('Привет!')
+ancestorElement.before(newElement, "Привет!")
+headerBody.after(newElement)
+ancestorElement.prepend(newElement)
+ancestorElement.insertAdjacentHTML(
+  'beforebegin',
+  `<p>Живи, а работай в 
+  <span class="dec-through">свободное</span> время!</p>`
+)
+headerBody.insertAdjacentHTML(
+  'afterbegin',
+  `<p>Живи, а работай в 
+  <span class="dec-through">свободное</span> время!</p>`
+)
+ancestorElement.insertAdjacentHTML(
+  'beforeend',
+  `<p>Живи, а работай в 
+  <span class="dec-through">свободное</span> время!</p>`
+)
+headerBody.insertAdjacentHTML(
+  'afterend',
+  `<p>Живи, а работай в 
+  <span class="dec-through">свободное</span> время!</p>`
+)
+const cloneTextElement = ancestorElement.cloneNode()
+headerBody.append(cloneTextElement)
+const cloneTextElementZero = headerBody.cloneNode(true)
+ancestorElement.prepend(cloneTextElementZero)
+ancestorElement.remove()
+const element = document.querySelector('.header__overlay')
+element.className
+element.classList.add('active')
+element.classList.remove('active')
+element.classList.toggle('active')
+element.classList.contains('active')
+element.style.color = 'blue'
+const elemOne = document.querySelector('.nav')
+elemOne.style.cssText = `
+  margin-bottom: 30px;
+  color: red;
+`
+const elementStyle = getComputedStyle(element)
+console.log(elementStyle.fontSize)
+const elemTwo = document.querySelector('ol li')
+const elementHoverStyle = getComputedStyle(elemTwo, "::before")
+console.log(elementHoverStyle.width)
+console.dir(element)
+elemsTwo.hasAttribute('attribute')
+elemsTwo.getAttribute('attribute')
+elemsTwo.setAttribute('attribute', 'value')
+elemsTwo.removeAttribute('attribute')
+//attribute 'value' cannot be changed here
+elemsTwo.tagName
+const elemThree = document.querySelector('.header__overlay')
+element.hidden = true
+
+const htmlElementWidth = htmlElement.clientWidth
+const htmlElementHeight = htmlElement.clientHeight
+const windowWidth = window.innerWidth
+const windowHeight = window.innerHeight
+let scrollWidth = Math.max(
+  bodyElement.scrollWidth, htmlElement.scrollWidth,
+  bodyElement.offsetWidth, htmlElement.offsetWidth,
+  bodyElement.clientWidth, htmlElement.clientWidth
+)
+let scrollHeight = Math.max(
+  bodyElement.scrollHeight, htmlElement.scrollHeight,
+  bodyElement.offsetHeight, htmlElement.offsetHeight,
+  bodyElement.clientHeight, htmlElement.clientHeight
+)
+const windowScrollTop = window.scrollY
+const windowScrollLeft = window.screenX
+function setScrollBy(x, y) {
+  window.scrollBy(x, y)
+  console.log(windowScrollTop)
+}
+function setScrollTo() {
+  window.scrollTo(0, 50)
+  console.log(windowScrollTop)
+}
+function setScrollToOptions() {
+  window.scrollTo({
+    top: 500,
+    left: 0,
+    behavior: "smooth"
+  })
+}
+function setScrollIntoView(top/*false*/) {
+  elemOne.scrollIntoView(top)
+}
+function setScrollIntoViewOptions(top) {
+  elemOne.scrollIntoView({
+    block: "center", // start, end, nearest
+    inline: "nearest",
+    behavior: "smooth"
+  })
+}
+const elementOffsetParent = elemOne.offsetParent
+const elementOffsetLeft = elemOne.offsetLeft
+const elementOffsetTop = elemOne.offsetTop
+const elementOffsetWidth = elemOne.offsetWidth
+const elementOffsetHeight = elemOne.offsetHeight
+const elementClientLeft = elemOne.clientLeft
+const elementClientTop = elemOne.clientTop
+const elementClientWidth = elemOne.clientWidth
+const elementClientHeight = elemOne.clientHeight
+const elementScrollLeft = elemOne.scrollLeft
+const elementScrollTop = elemOne.scrollTop
+const nogap = document.querySelector('#nogap')
+nogap.scrollTop = 150
+nogap.scrollLeft = 75
+const getElemOneCoords = elemOne.getBoundingClientRect()
+const getElemOneTopCoord = elemOne.getBoundingClientRect().top
+const getElemOneTopDocumentCoord = getElemOneTopCoord + window.scrollY
+const elemFour = document.elementFromPoint(100, 500)
+
+elemOne.onclick = function() {
+  nogap.scrollIntoView(top)
+}
+
+const options = {
+  'capture': false,
+  "once": false,
+  "passive": false
+}
+let ae = 0
+function changeBackColor() {
+  if (elemOne.style.backgroundColor == "rgba(0, 0, 0, 0)") {
+    elemOne.style.backgroundColor = "white"
+    ae++
+  } else {
+    elemOne.style.backgroundColor = "rgba(0, 0, 0, 0)"
+  }
+  if(ae === 5) {
+    elemOne.removeEventListener('mouseenter', changeBackColor)
+    console.log('Клик!')
+  }
+}
+elemOne.addEventListener('mouseenter', changeBackColor, options)
+function showConsole(event) {
+  event.type
+  event.target
+  event.currentTarget
+  event.clientX
+  event.clientY
+}
+elemOne.addEventListener('click', showConsole)
+const elemFive = document.querySelector('nav p')
+elemFive.addEventListener('click', function(event) {
+  console.log("Клик на надпись!")
+  event.stopPropagation()
+})
+const elemSix = document.querySelector('.opacity02')
+const elemSeven = elemSix.parentElement
+elemSeven.addEventListener('click', function(event) {
+  console.log("Клик на список!")
+}, options[0] = true)
+elemSix.addEventListener('click', function(event) {
+  console.log("Клик на пункт!")
+})
+const ol = document.querySelector('ol')
+ol.addEventListener('click', function(event) {
+  if (event.target.closest('li')) {
+    console.log("Ура!")
+  }
+})
+const menuBody = document.querySelector('.menu')
+
+document.addEventListener('click', menu)
+
+function menu(event) {
+  if (event.target.closest('.menu_button')) {
+    menuBody.classList.toggle('_active')
+  }
+  if (!event.target.closest('.menu')) {
+    menuBody.classList.remove('_active')
+  }
+}
+
+const link = document.querySelector('.link')
+link.onclick = function() {
+  return false
+}
+link.addEventListener('click', function(event) {
+  event.preventDefault()
+})
+const linkZero = document.querySelector('.subcolumn a')
+linkZero.addEventListener('click', function(event) {
+  event.preventDefault()
+}, {"passive": true})
+const elemEight = document.querySelector('#picture')
+elemEight.addEventListener('mousedown', function(event) {
+  console.log(`Нажата кнопка ${event.which}`)
+})
+elemEight.addEventListener('contextmenu', function() {
+  console.log("Вызвано контекстное меню")
+})
+const elemNine = document.querySelector('.mousemove')
+elemNine.addEventListener('mousemove', function(event) {
+  elemNine.innerHTML = `${event.clientX} <br>
+  ${event.clientY}`
+})
+bodyElement.addEventListener('mousemove', function(event) {
+  elemNine.innerHTML = ''
+  if (event.target.closest('.mousemove')) {
+    elemNine.innerHTML = `${event.clientX} <br> ${event.clientY}`
+  }
+})
+elemOne.addEventListener('mouseover',  function(event) {
+  elemFive.innerHTML = 'Курсор над элементом'
+  elemFive.style.padding = "25% 5%"
+  elemOne.style.width = "80px"
+  elemOne.style.heigh = "80px"
+  event.target
+  event.relatedTarget
+
+})
+elemOne.addEventListener('mouseout',  function(event) {
+  elemFive.innerHTML = 'Курсор ушел с элемента'
+  elemFive.style.padding = "20% 10%"
+  event.target
+  event.relatedTarget
+})
+elemSeven.addEventListener('mouseleave', function(event) {
+  elemFive.innerHTML = 'содержимое'
+  elemFive.style.padding = "40% 0"
+  elemOne.style.width = "75px"
+  elemOne.style.heigh = "75px"
+})
+
+elemSeven.addEventListener('mouseover', function(event) {
+  let target = event.target.closest('li')
+  if (!target) return
+  target.style.cssText = `
+    background-color: #77608d;
+    color: white;
+`})
+elemSeven.addEventListener('mouseout', function(event) {
+  let target = event.target.closest('li')
+  if (!target) return
+  target.style.cssText = ``
+})
+
+
+menuBody.addEventListener("mousedown", function (event) {
+
+  let coordsItemX = event.clientX - menuBody.getBoundingClientRect().left;
+  let coordsItemY = event.clientY - menuBody.getBoundingClientRect().top;
+  
+  let menuBodySizes = {
+  width: menuBody.offsetWidth,
+  height: menuBody.offsetHeight
+  }
+  let bodyElementSizes = {
+  left: bodyElement.getBoundingClientRect().left + scrollX,
+  top: bodyElement.getBoundingClientRect().top + scrollY,
+  right: bodyElement.getBoundingClientRect().left + scrollX + bodyElement.offsetWidth,
+  bottom: bodyElement.getBoundingClientRect().top + scrollY + bodyElement.offsetHeight
+  }
+  
+  menuBody.style.position = 'absolute';
+  menuBody.style.zIndex = 1000;
+  document.body.append(menuBody);
+  
+  moveItem(event.pageX, event.pageY);
+  
+  function moveItem(pageX, pageY) {
+  let currentX = pageX - coordsItemX;
+  let currentY = pageY - coordsItemY;
+  
+  if (
+  currentX + menuBodySizes.width <= bodyElementSizes.right &&
+  currentX >= bodyElementSizes.left
+  ) {
+  menuBody.style.left = `${currentX}px`;
+  } else {
+  if (currentX + menuBodySizes.width > bodyElementSizes.right) {
+  menuBody.style.left = `${bodyElementSizes.right - menuBodySizes.width}px`;
+  }
+  if (currentX < bodyElementSizes.left) {
+  menuBody.style.left = `${bodyElementSizes.left}px`;
+  }
+  }
+  if (
+  currentY + menuBodySizes.height <= bodyElementSizes.bottom &&
+  currentY >= bodyElementSizes.top
+  ) {
+  menuBody.style.top = `${currentY}px`;
+  } else {
+  if (currentY + menuBodySizes.height > bodyElementSizes.bottom) {
+  menuBody.style.top = `${bodyElementSizes.bottom - menuBodySizes.height}px`;
+  }
+  if (currentY < bodyElementSizes.top) {
+  menuBody.style.top = `${bodyElementSizes.top}px`;
+  }
+  }
+  }
+  
+  function onDragItem(event) {
+  moveItem(event.pageX, event.pageY);
+  
+  }
+  document.addEventListener('mousemove', onDragItem,);
+  
+  document.addEventListener("mouseup", function (event) {
+    document.removeEventListener('mousemove', onDragItem);
+  }, { "once": true });
+  });
+  menuBody.addEventListener("dragstart", function (event) {
+  event.preventDefault();
+  });
+  

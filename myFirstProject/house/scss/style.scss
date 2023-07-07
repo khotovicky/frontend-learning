@@ -1,0 +1,40 @@
+@import "nullstyle.scss";
+
+* {
+    border: 1px solid black;
+
+}
+
+.floor {
+    padding: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 26.5px auto;
+    height: 603px;
+    width: 618.5px;
+}
+
+
+.rooms {
+    width: 232.5px;
+    height: 410px;
+}
+.rest{
+    width: 346px;
+
+}
+.entryway {
+    justify-self: left;
+    height: 148px;
+    width: 327px;
+    margin: 5px 0 0 0;
+}
+.walls {
+    border-right: none;
+    border-bottom: none;
+    width: 246.5px;
+    margin: 5px 0 0 5px;
+    box-shadow: white 30px 30px 0 30px;
+}

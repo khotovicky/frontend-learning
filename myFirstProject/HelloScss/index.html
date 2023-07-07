@@ -3,8 +3,7 @@
 <head>
     <title>Документ</title>
     <meta charset="UTF-8">
-    <!-- Не дает масштабировать:-->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Не дает масштабировать:--><meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--отключает ссылку на номере телефона на ioS:-->
     <meta name="format-detection" content="telephone=no">  
     <meta name="description" content="Практика frontend">
@@ -49,7 +48,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button class="button">Ужос какой!</button>
+    <button attribute="example" class="button">Ужос какой!</button>
     <div>
         <h1 class="text-center vertical-base-padding">Header
             <div class="header_body">
@@ -88,7 +87,7 @@
         <nav class="nav">
             <p>содержимое</p>
         </nav>
-        <ul>
+        <ul class="ul">
             <li class="opacity02">содержимое</li>
             <li>Nullam -  row altitudo vide</li>
             <li>imago -  latitudo maximum requiritur</li>
@@ -102,11 +101,23 @@
             <li>содержимое</li>
             <li>содержимое</li>
         </ol>
+        <nav class="menu">
+            <button type="button" class="menu_button">
+                <span>Открыть меню</span>
+                <span>Закрыть меню</span>
+            </button>
+            <ul hidden class="menu_list">
+                <li><a href="" class="menu_link">Пункт №1</a></li>
+                <li><a href="" class="menu_link">Пункт №2</a></li>
+                <li><a href="" class="menu_link">Пункт №3</a></li>
+                <li><a href="" class="menu_link">Пункт №4</a></li>
+            </ul>
+        </nav>
         <form action="#" method="get">
             
         </form>
         <form action="#" method="post" enctype="multipart/form-data">
-            <p>Имя</p>
+            <p><a class="link" href="https://wsjp.pl">Имя</a></p>
             <input tabindex="1" placeholder="Подпись поля" type="text" name="username" value="">
             <input disabled type="tel" name="usernumber" value="">
             <input tabindex="2" type="password" name="userpass" value="">
@@ -130,7 +141,7 @@
             <button tabindex="10" type="reset">Очистить</button>
             <button tabindex="11" type="submit">Отправить</button>
         </form>
-       
+        <div class="mousemove"></div>
         
 
         <div id="articles">
@@ -237,6 +248,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="drag-field">
+            <div class="drag-field__item"></div>
+            <div class="drag-field__point"></div>
         </div>
         <div id="footer" class="text-center vertical-base-padding">
             Все права защищены, до, безусловно 

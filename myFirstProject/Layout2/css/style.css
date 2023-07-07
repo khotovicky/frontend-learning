@@ -1,0 +1,280 @@
+@import "nullstyle.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Montserrat:wght@500;600;700&display=swap');
+
+
+
+body {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+
+header {
+    padding: 14px 121px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-weight: 500;
+}
+
+
+.brand-name {
+    padding: 0 28px 0 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.brand-text {
+    color: #0C2443;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#last-item {
+    padding: 0 0 0 28px;
+}
+
+.secondHeader {
+    background: url(../img/secondHeaderImg.jpg) center/cover no-repeat;
+    padding: 221px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    align-items: center;
+    color: #F0F0F0;
+}
+
+.second-title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 111.4%;
+}
+
+.subtitle {
+    padding: 0 0 37px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 111.4%;
+}
+
+.requestButton {
+    padding: 20px 52px;
+    border-radius: 10px;
+    background: #F0F0F0;
+    color: #0C2443;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 96.4%;
+}
+
+.about {
+    padding: 24px 120px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+}
+
+.about-body {
+    max-width: 560px;
+    flex-basis: 150px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    gap: 100px;
+}
+
+.about-title{
+    
+}
+
+.title {
+    color: #0C2443;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 96.4%;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 98.4%;
+}
+
+.services {
+    padding: 24px 0;
+}
+.services-title {
+    text-align: left;
+    padding: 0 0 24px 120px;
+}
+
+.services-body {
+    padding: 33px 116px;
+    border-radius: 25px;
+    background: #0C2443;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 116px;
+}
+
+.services-item {
+    max-width: 425px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.routes {
+    background:#EDEDED;
+}
+
+.routes-content {
+    height: 786px;
+    margin: 24px 0;
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(../img/image\ 6.svg) top left/54% no-repeat, url(../img/routes-map.png) center/62% no-repeat, url(../img/image\ 5.svg) top right/54% no-repeat;
+}
+.routes-title {
+    font-size: 20px;
+    line-height: 96.4%;
+}
+
+.routes-text {
+    color: #0C2443;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 111.4%;
+}
+
+.routes-countries {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.routes-country {
+    display: flex;
+    align-self: last baseline;
+    padding-right: 106px;
+    text-align: left;
+    gap: 10px;
+}
+
+.routes-name {
+    flex: 0 0 61px;
+}
+
+.routes-country img {
+    flex: 1 1 auto;
+}
+
+.routes-percent {
+    flex: 0 0 26px;
+}
+
+.routes-year {
+    padding: 20px 106px 0 0;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 96.4%;
+}
+
+.goods {
+    padding: 24px 118px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.goods-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 96.4%;
+    text-align: left;
+}
+
+.goods-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods-items {
+    padding: 0 100px;
+    background: url(../img/goodsIconOne.svg) 0 0/contain no-repeat, url(../img/goodsIconTwo.svg) 100%/contain no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.goods-item {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.goods-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 96.4%;
+    max-width: 117px;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 14px 24px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #last-item, .brand-name {
+        padding: 0;
+    }
+    .brand-name {
+        flex-direction: column;
+    }
+    .routes-content {
+        background-size: 54%, contain, contain;
+    }
+}
+
+@media (max-width: 670px) {
+    .goods {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .routes-country {
+        align-self: stretch;
+    }
+    .routes-country img {
+        min-width: 24px;
+    }
+    .goods-items {
+        padding: none;
+        background: none;
+    }
+}
+
+

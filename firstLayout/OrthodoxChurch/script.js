@@ -67,6 +67,11 @@ while (true) {
     }
 }
 
+(function IIFE(){
+    console.log("Hello!")
+  })();
+
+
 
 
 
